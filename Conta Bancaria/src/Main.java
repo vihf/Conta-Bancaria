@@ -6,10 +6,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Bem vindo a sua conta bancária falida");
         Scanner scanner = new Scanner(System.in);
-        ContaBancaria conta = new ContaBancaria();
-        conta.titular = "Bill Gates";
-        conta.numeroConta = "123456-7";
-        conta.saldo = 100.00;
+        ContaBancaria conta = new ContaBancaria("Bill Gates","123456-7", 100.00);
 
         int opcao;
         do {
@@ -17,6 +14,7 @@ public class Main {
             System.out.println("1 - Consulta Saldo");
             System.out.println("2 - Depositar");
             System.out.println("3 - Sacar");
+            System.out.println("4 - Ver Histórico");
             System.out.println("0 - Sair");
             System.out.println("Escolha uma opção");
             opcao = scanner.nextInt();
@@ -34,6 +32,9 @@ public class Main {
                     System.out.print("Valor do saque: R$ ");
                     double valorSaque = scanner.nextDouble();
                     conta.sacar(valorSaque);
+                    break;
+                case 4:
+                    conta.mostrarHistorico();
                     break;
                 case 0:
                     System.out.println("Obrigado por gastar seu dinheiro!");
