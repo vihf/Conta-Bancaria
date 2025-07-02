@@ -4,7 +4,7 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Bem vindo a sua conta bancária falida");
+        System.out.println("Bem vindo a sua conta bancária");
         Scanner scanner = new Scanner(System.in);
         ContaBancaria conta = new ContaBancaria("Bill Gates","123456-7", 100.00);
 
@@ -37,7 +37,7 @@ public class Main {
                     conta.mostrarHistorico();
                     break;
                 case 0:
-                    System.out.println("Obrigado por gastar seu dinheiro!");
+                    System.out.println("Cuide bem do seu dinheiro!");
                     break;
                 default:
                     System.out.println("Opção inválida.");
